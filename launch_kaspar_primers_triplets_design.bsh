@@ -1,0 +1,18 @@
+#! /bin/bash
+# chmod 755 lance_kaspar_primers_triplets_design.bsh
+# lancement en tâche de fond : nohup ./lance_kaspar_primers_triplets_design.bsh
+# dont forget dos2unix on input file
+#./kaspar_primers_triplets_design_v_0_1.py -in SNPs_list.txt
+
+#./kaspar_primers_triplets_design_v_0_1.py -in SNPs_list.txt -pcr_parameters PRIMER_THERMODYNAMIC_OLIGO_ALIGNMENT=0 PRIMER_MAX_TM=85 PRIMER_MIN_TM=49 PRIMER_NUM_RETURN=15 -debug
+
+./kaspar_primers_triplets_design_v_0_1.py -in multifasta_kaspar_ismail_201bp.txt  -pcr_parameters_file /home/gjb99/GBS/tools/KaSpaR/pcr_parameters.txt -debug -species_db /home/gjb99/GBS/manihot_ref6/Mesculenta/Manihot_v6.1/assembly/Mesculenta_305_v6.fa
+
+#./kaspar_primers_triplets_design_v_0_1.py -in multifasta_PHENE_PHEAC_Magic_poly_12_5_80_K8.txt  -pcr_parameters_file /home/av07/gafl/gbauchet/kaspar_primers_triplets_design/pcr_parameters.txt -debug -species_db /data/db/public/sgn/genomes/Solanum_lycopersicum/wgs/assembly/build_2.40/ncbi/S_lycopersicum_chromosomes.2.40
+
+
+#./kaspar_primers_triplets_design_v_0_1.py -in multifasta_PHENE_PHEAC_Magic_poly_12_5_80_K8.txt  -pcr_parameters_file /home/gjb99/GBS/tools/KaSpaR/pcr_parameters.txt -debug -species_db /data/blastdb/Solanum_lycopersicum/S_lycopersicum_chromosomes.2.40.fa
+
+
+#Suppression du dossier SNP
+#\rm -rf SNP
